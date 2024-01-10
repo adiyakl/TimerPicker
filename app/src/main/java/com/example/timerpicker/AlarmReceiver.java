@@ -12,6 +12,8 @@ public class AlarmReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent ri) {
         String msg = ri.getStringExtra("msg");
         Toast.makeText(context, msg+" Alarm has been activated !", Toast.LENGTH_LONG).show();
+        String text = "Notification";
+        NotificationHelper.showNotification(context, text);
         }
 }
 
